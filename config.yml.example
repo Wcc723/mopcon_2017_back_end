@@ -1,0 +1,19 @@
+
+
+
+
+# Google Sheet Config
+# https://spreadsheets.google.com/feeds/worksheets/{Key}/public/basic 欄位查詢
+spreadsheets:
+  shPath: 
+  shKey1: 
+  # 議程
+  schedule:
+    shKey: shKey1
+    shList: 
+
+
+# WEBHOOK
+# Webhook 參考套件
+webhook:
+  port: 7777
