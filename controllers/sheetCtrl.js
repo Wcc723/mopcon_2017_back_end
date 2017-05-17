@@ -12,6 +12,26 @@ const getSheetData = function (shList, shKey, callback) {
   }, callback)
 }
 
+/*
+ * [mappingTable]
+ * #key: api Key.
+ * #table: google sheet table name.
+ */
+const mappingTable = [
+  {key: 'name'        , table: '姓名'},
+  {key: 'info'        , table: '個人介紹'},
+  {key: 'topic'       , table: '演講主題'},
+  {key: 'summary'     , table: '演講摘要'},
+  {key: 'image'       , table: '檔名'},
+  {key: 'facebook'    , table: 'facebook'},
+  {key: 'github'      , table: 'github'},
+  {key: 'blog'        , table: 'blog'},
+  {key: 'website'     , table: 'website'},
+  {key: 'linkin'      , table: 'linkin'},
+  {key: 'time'        , table: '時間'},
+  {key: 'day'         , table: '大會日'}
+]
+
 const SheetCtrl = function (name) {
   let vm = this
   vm.name = name
@@ -24,21 +44,20 @@ const SheetCtrl = function (name) {
   vm.getData = () => {
     return new Promise((resolve, reject) => {
       getSheetData(shList, shKey, function (error, response, body) {
-
+        
         // format JSON.
         let formatJSON = response.body.feed.entry.map((row) => {
-          return {
-            'name'      : row['gsx$姓名']['$t'].replace(/\n/g, '<br/>'),
-            'info'      : row['gsx$個人介紹']['$t'].replace(/\n/g, '<br/>').replace(/\r/g, '<br/>'),
-            'topic'     : row['gsx$演講主題']['$t'].replace(/\n/g, ''),
-            'summary'   : row['gsx$演講摘要']['$t'].replace(/\n/g, '<br/>').replace(/\r/g, '<br/>'),
-            'image'     : row['gsx$檔名']['$t'],
-            'facebook'  : row['gsx$facebook']['$t'],
-            'github'    : row['gsx$github']['$t'],
-            'blog'      : row['gsx$blog']['$t'],
-            'website'   : row['gsx$website']['$t'],
-            'linkin'    : row['gsx$linkin']['$t']
-          }
+          const obj = {}
+
+          for(var mappingObj in mappingTable) {
+            var item = mappingTable[mappingObj];
+            var tableName = `gsx$${item.table}`
+            if(row[tableName]){
+              obj[item.key] = row[tableName]['$t'].replace(/\n/g, '<br/>').replace(/\r/g, '<br/>')
+            }
+          };
+
+          return obj;
         })
 
         vm.data = formatJSON

@@ -6,6 +6,7 @@ const jsonSource = require('../../data/index')
 
 // Data
 let scheduleSheet = new SheetCtrl('schedule')
+let unconfSheet = new SheetCtrl('unconf')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -14,6 +15,14 @@ router.get('/', function(req, res, next) {
 
 router.get('/schedule', (req, res, next) => {
     res.send(scheduleSheet.data)
+    res.end()
+})
+
+router.get('/unconf', (req, res, next) => {
+    res.send({
+        'day_one': unconfSheet.data.filter((item) => item.day === 'day1'),
+        'day_two': unconfSheet.data.filter((item) => item.day === 'day2')
+    })
     res.end()
 })
 
