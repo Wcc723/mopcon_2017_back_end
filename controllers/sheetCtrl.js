@@ -28,8 +28,18 @@ const mappingTable = [
   {key: 'blog'        , table: 'blog'},
   {key: 'website'     , table: 'website'},
   {key: 'linkin'      , table: 'linkin'},
+  // schedule
   {key: 'time'        , table: '時間'},
-  {key: 'day'         , table: '大會日'}
+  {key: 'day'         , table: '大會日'},
+  // sponsor
+  {key: 'rank'        , table: '贊助等級'},
+  {key: 'name'        , table: '贊助商名稱'},
+  {key: 'logo'        , table: '贊助商LOGO'},
+  {key: 'link'        , table: '贊助商官網連結'},
+  // community
+  {key: 'name'        , table: '社群名稱'},
+  {key: 'logo'        , table: '社群LOGO'},
+  {key: 'info'        , table: '社群簡介'}
 ]
 
 const SheetCtrl = function (name) {
