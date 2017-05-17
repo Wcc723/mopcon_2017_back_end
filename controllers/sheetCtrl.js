@@ -34,11 +34,11 @@ const mappingTable = [
   // sponsor
   {key: 'rank'        , table: '贊助等級'},
   {key: 'name'        , table: '贊助商名稱'},
-  {key: 'logo'        , table: '贊助商LOGO'},
+  {key: 'logo'        , table: '贊助商logo'},
   {key: 'link'        , table: '贊助商官網連結'},
   // community
   {key: 'name'        , table: '社群名稱'},
-  {key: 'logo'        , table: '社群LOGO'},
+  {key: 'logo'        , table: '社群logo'},
   {key: 'info'        , table: '社群簡介'}
 ]
 
