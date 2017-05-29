@@ -1,0 +1,47 @@
+.footer {
+    margin: 100px auto;
+}
+
+.footer_contactUs {
+    padding: 20px;
+    margin-bottom: 70px;
+    font-size: $font-larger;
+    color: $colorWhite;
+    border: 1px solid $colorWhite;
+    display: inline-block;
+    position: relative;
+    &:hover,
+    &:focus,
+    &:active {
+        border: 1px solid $colorWhite;
+        background: $colorWhite;
+        color: $colorMainFirst;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 110px;
+        right: 0;
+        left: 0;
+        bottom: -110px;
+        margin: auto;
+        background-color: $colorWhite;
+    }
+}
+
+.footer_mail {
+    margin-bottom: 40px;
+    img {
+        margin-bottom: 20px;
+    }
+    span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $colorWhite;
+        display: block;
+        margin: 20px auto;
+    }
+}

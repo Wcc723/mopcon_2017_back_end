@@ -3,33 +3,33 @@
 // Typography
 // 
 // *********************************************
-$font-family-base: Arial,
+$font-family-base:'Microsoft JhengHei',
+Arial,
 Geneva,
-'Microsoft JhengHei',
 sans-serif;
-$font-size-base: 14px;
-$font-larger: 1.5rem;
-$font-large: 1.2rem;
-$font-normal: 1rem;
+$font-size-base: 16px;
+$font-larger: 1.8em;
+$font-large: 1.2em;
+$font-normal: 1em;
 $font-small: 0.857142rem; // 12px
 // *********************************************
 // 
 // Color
 // 
 // *********************************************
-$colorMainFirst:#2a1672;
-$colorMainSecond:#ffdf3c;
-$colorMainThird:#ff4f94;
-$colorMainFouth:#24ffb0;
-$colorMainFirst-light:#EED9FF;
-$colorMainFouth-dark:#08cd86;
-$colorSubFirst:#39006c;
+$colorMainFirst:#181E3E;
+$colorMainSecond:#7BB6AD;
+$colorMainThird:#F1E28C;
+$colorSubFirst:#293264;
+$colorSubSecond:#E3E1DA;
+$colorSubThird:#B5814B;
 $bgcolor: $colorMainFirst;
-$color: #383838;
-$colorGray:#9B9B9B;
-$colorGray-light:#d8d8d8;
-$colorGradientFirst:#461d87;
-$colorGradientSecond:#221938;
+$color: #666464;
+$colorWhite:#fff;
+// $colorGray:#9B9B9B;
+// $colorGray-light:#d8d8d8;
+// $colorGradientFirst:#461d87;
+// $colorGradientSecond:#221938;
 // $color-muted
 // $color-primary
 // $color-success
