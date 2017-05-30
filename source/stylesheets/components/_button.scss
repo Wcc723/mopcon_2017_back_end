@@ -34,3 +34,17 @@
         color: $colorWhite;
     }
 }
+
+.btn-warning {
+    border: 1px solid $colorMainThird;
+    background: none;
+    color: $colorMainThird;
+    &.is-active,
+    &:hover,
+    &:focus,
+    &:active {
+        border: 1px solid $colorMainThird;
+        background: $colorMainThird;
+        color: $colorWhite;
+    }
+}
