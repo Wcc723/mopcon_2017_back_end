@@ -1,35 +1,28 @@
 .schedule {
-    background-color: $colorMainSecond;
-    // margin: 20% auto;
-    padding-bottom: 10%;
-    padding: 20% 0;
     position: relative;
-    // &:after,
-    // &:before {
-    //     content: '';
-    //     background-image: url(../images/panel-deco-wave.png);
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //     width: 100%;
-    //     height: 264px;
-    //     display: block;
-    //     position: absolute;
-    // }
-    // &:before {
-    //     top: 0;
-    // }
-    // &:after {
-    //     transform: rotate(180deg);
-    //     bottom: 0;
-    // }
+    .schedule_content{
+        background-color: $colorMainSecond;
+    }
+    .btn-primary{
+    	display: table;
+    	margin: auto;
+    }
 }
-// .schedule_deco{
-// 	        background-image: url(../images/panel-deco-wave.png);
-//         background-size: cover;
-//         background-repeat: no-repeat;
-//         width: 100%;
-//         height: 349px;
-//         display: block;
-//         position: absolute;
-//         top: 0;
-// }
+
+.schedule_deco {
+    background-image: url(../images/panel-deco-wave.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 410px;
+    @include pad-below () {
+        padding-bottom: 40%;
+    }
+    @include mobile() {
+        padding-bottom: 50%;
+    }
+    display: block;
+    &.reverse {
+        transform: rotate(180deg)
+    }
+}

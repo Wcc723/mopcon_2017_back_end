@@ -1,6 +1,9 @@
+html{
+    font-size: $font-size-base;
+}
 body {
     font-family: $font-family-base;
-    font-size: $font-size-base;
+    font-size: $font-size-base !important;
     color: $color;
     background: $bgcolor;
     height: 100%;
@@ -16,7 +19,6 @@ a {
 * {
     letter-spacing: .8px;
     line-height: 1.6;
-    // transition: all 0.25s ease-in-out;
     ::selection {
         background-color: $colorMainSecond;
         color: #fff;

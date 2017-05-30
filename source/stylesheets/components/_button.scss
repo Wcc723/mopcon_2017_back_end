@@ -2,9 +2,11 @@
     cursor: pointer;
     margin: 0 5px 5px 0;
     border-radius: 0;
-    padding: 10px 12px;
+    // padding: 10px 12px;
 }
-
+.btn-lg{
+    font-size: $font-larger;
+}
 .btn-default {
     border: 1px solid $colorWhite;
     background: none;
@@ -16,5 +18,19 @@
         border: 1px solid $colorWhite;
         background: $colorWhite;
         color: $colorMainFirst;
+    }
+}
+
+.btn-primary {
+    border: 1px solid $colorMainFirst;
+    background: none;
+    color: $colorMainFirst;
+    &.is-active,
+    &:hover,
+    &:focus,
+    &:active {
+        border: 1px solid $colorMainFirst;
+        background: $colorMainFirst;
+        color: $colorWhite;
     }
 }

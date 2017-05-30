@@ -1,6 +1,9 @@
-.content{
-	color: $colorWhite;
+.content {
+    color: $colorWhite;
 }
-.content-post{
-	font-size: $font-large;
+
+.content-post {
+    p {
+        font-size: $font-large;
+    }
 }

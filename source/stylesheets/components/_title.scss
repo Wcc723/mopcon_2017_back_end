@@ -28,7 +28,7 @@
 .title_ch {
     margin-top: 80px;
     color: $colorMainThird;
-    font-size: 3em;
+    font-size: 3rem;
     position: relative;
     @include pad () {
         font-size: $font-larger;
@@ -47,20 +47,26 @@
         background-color: $colorSubThird;
         border-radius: 50%;
         width: .8em;
-        height: .8em;
+        height:.8em;
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
-        margin-left: .5em;
+        margin-left: .5rem;
     }
 }
 
 .title-twiDot {
     color: $colorMainThird;
-    font-size: 2em;
+    font-size: 3rem;
+    &:before,&:after{
+    	content: '::';
+    }
 }
-
+.title-twiDot-h2{
+    font-size:2rem; 
+    color:$colorSubThird;
+}
 .title-deco-dot {
     background: url(../images/title-deco-dot.png) no-repeat;
     position: absolute;
