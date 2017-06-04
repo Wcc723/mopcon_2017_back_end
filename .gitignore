@@ -2,3 +2,6 @@ node_modules
 config.yml
 yarn.lock
 npm-debug.log
+public
+.tmp
+bower_components

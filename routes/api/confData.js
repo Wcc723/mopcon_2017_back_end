@@ -5,10 +5,10 @@ const SheetCtrl = require('../../controllers/sheetCtrl')
 const jsonSource = require('../../data/index')
 
 // Data
-let scheduleSheet = new SheetCtrl('schedule')
-let unconfSheet = new SheetCtrl('unconf')
-let sponsorSheet = new SheetCtrl('sponsor')
-let communitySheet = new SheetCtrl('community')
+// let scheduleSheet = new SheetCtrl('schedule')
+// let unconfSheet = new SheetCtrl('unconf')
+// let sponsorSheet = new SheetCtrl('sponsor')
+// let communitySheet = new SheetCtrl('community')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
