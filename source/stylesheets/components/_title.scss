@@ -20,7 +20,7 @@
         height: 100%;
         position: absolute;
         left: 0;
-        background: url(../images/title-deco-gear.png) no-repeat;
+        background: url(../images/title-deco-gear.svg) no-repeat;
         background-size: contain;
     }
 }
@@ -68,12 +68,12 @@
     color:$colorSubThird;
 }
 .title-deco-dot {
-    background: url(../images/title-deco-dot.png) no-repeat;
+    background: url(../images/title-deco-dot.svg) no-repeat;
     position: absolute;
     right: 0;
-    top: -30%;
-    width: 50%;
-    max-width: 480px;
+    top: -25%;
+    width: 45%;
+    max-width: 380px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
