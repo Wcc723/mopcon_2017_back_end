@@ -24,12 +24,12 @@
 
 .mainVisualPic {
     transition: all 0.25s ease-in-out;
-    background-image: url(../images/header-banner.png);
+    background-image: url(../images/header-banner.svg);
     @include pad-below () {
-        background-image: url(../images/header-banner-m.png);
+        background-image: url(../images/header-banner-m.svg);
     }
     @include mobile() {
-        background-image: url(../images/header-banner-m.png);
+        background-image: url(../images/header-banner-m.svg);
     }
     background-size: contain;
     background-repeat: no-repeat;

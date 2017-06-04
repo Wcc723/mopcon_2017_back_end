@@ -94,3 +94,21 @@
         }
     }
 }
+
+.nav-community {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    a {
+        font-size: 2.1em;
+        color: $colorWhite;
+        margin-right: 2px;
+        &.is-active,
+        &:hover,
+        &:focus,
+        &:active {
+            background: $colorMainFirst;
+            color: $colorSubSecond;
+        }
+    }
+}
