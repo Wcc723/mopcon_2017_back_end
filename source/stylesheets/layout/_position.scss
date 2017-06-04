@@ -1,0 +1,43 @@
+.position {
+    overflow: hidden;
+}
+
+.position_content {
+    border: 7px solid $colorMainSecond;
+    background: $colorWhite;
+    padding: 4%;
+    position: relative;
+    .h2 {
+        color: $colorSubThird;
+        font-size: 3rem;
+    }
+    .h3 {
+        font-size: $font-larger;
+    }
+    .h4 {
+        color: $colorSubThird;
+        font-size: $font-larger;
+    }
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-style: solid;
+        border-width: 70px 50px 0 50px;
+        border-color: #7BB6AD transparent transparent transparent;
+        bottom: -70px;
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+}
+
+.post-dot {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: $colorMainSecond;
+    display: table;
+    margin: 2rem auto;
+}
