@@ -3,7 +3,7 @@
 }
 
 .sponsor_content {
-    margin: 60px auto;
+    margin: 100px auto;
     position: relative;
 }
 
@@ -20,6 +20,11 @@
     top: -2rem;
     left: -30px;
     text-align: center;
+    @include pad-below () {
+        font-size: $font-large;
+        max-width: 200px;
+        left: -15px;
+    }
 }
 
 .sponsor_content_area {
@@ -27,4 +32,7 @@
     background-color: $colorWhite;
     border-radius: 34px;
     padding: 50px;
+    @include mobile() {
+        padding: 30px;
+    }
 }

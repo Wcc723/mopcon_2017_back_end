@@ -5,6 +5,7 @@ var expressLayouts = require("express-ejs-layouts");
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var i18n = require('i18n');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -63,5 +64,17 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// i18n config
+i18n.configure({
+  locales: ['zh_TW', 'en'],
+  defaultLocale: 'zh_TW',
+  cookie: 'lang',
+  directory: __dirname + '/locales',
+  register: global,
+  updateFiles: false
+});
+
+app.use(i18n.init);
 
 module.exports = app;

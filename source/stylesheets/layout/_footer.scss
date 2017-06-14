@@ -52,11 +52,6 @@
 
 .nav-history {
     display: inline-block;
-    .dropdown-menu {
-        width: 133px;
-        bottom: 35px;
-        top: inherit;
-    }
     .btn-select {
         display: inline-block;
         line-height: 30px;
@@ -79,6 +74,8 @@
         right: inherit;
         border-radius: 5px;
         background: $colorSubSecond;
+        bottom: 35px;
+        top: inherit;
     }
 }
 
