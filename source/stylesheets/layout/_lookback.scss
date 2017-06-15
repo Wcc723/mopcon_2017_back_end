@@ -1,0 +1,22 @@
+.lookback {
+    position: relative;
+    margin-bottom: 20px;
+    .lookback_content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        width: 100%;
+    }
+    .btn-default {
+        padding: 1.5rem 12rem;
+        position: absolute;
+        font-size: $font-larger;
+        @include pad-below () {
+            padding: .5rem 5rem;
+            position: absolute;
+            font-size: $font-normal;
+        }
+    }
+}

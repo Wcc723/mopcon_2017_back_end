@@ -63,11 +63,13 @@ gulp.task('bower', function() {
         .pipe(gulp.dest('./.tmp/vendors'));
     cb(err);
 });
+
 gulp.task('vendorJs', ['bower'], function() {
     return gulp.src(['./.tmp/vendors/**/**.js'])
         .pipe($.order([
             'jquery.js',
-            'bootstrap.js'
+            'bootstrap.js',
+            'owl.carousel.js'
         ]))
         .pipe($.concat('vendor.js'))
         .pipe($.if(options.env === 'production', $.uglify()))
@@ -98,8 +100,13 @@ gulp.task('sass', function() {
         }));;
 });
 
-gulp.task('fonts', function() {
+gulp.task('plugin', function() {
+    gulp.src('./bower_components/owl.carousel/dist/assets/*.min.css')
+        .pipe(gulp.dest('./public/plugin/'));
 
+});
+
+gulp.task('fonts', function() {
     gulp.src('./source/fonts/**/*')
         .pipe(gulp.dest('./public/fonts/'));
 
@@ -123,7 +130,7 @@ gulp.task('watch', function() {
     gulp.watch(['./source/javascripts/**/*.js'], ['babel']);
 });
 
-gulp.task('sequence', gulpSequence('clean', 'sass', 'babel', 'vendorJs', 'fonts', 'imageMin'));
+gulp.task('sequence', gulpSequence('clean', 'sass', 'babel', 'vendorJs', 'plugin', 'fonts', 'imageMin'));
 
-gulp.task('default', ['sass', 'babel', 'vendorJs', 'fonts', 'imageMin', 'watch']);
+gulp.task('default', ['sass', 'babel', 'vendorJs', 'plugin', 'fonts', 'imageMin', 'watch']);
 gulp.task('build', ['sequence'])
