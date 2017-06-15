@@ -64,8 +64,8 @@
             <a href="https://www.flickr.com/photos/mopcon/albums/" target="_blank" class="fa fa-flickr fa-2x" title="flickr"></a>
           </li>*/%>
           <li class="nav-lang">
-            <a href="#" class="btn btn-default" onClick="set_language('zh_TW')">中</a>
-            <a href="#" class="btn btn-default" onClick="set_language('en')">EN</a>
+            <a href="#" class="btn btn-default <%=lang === 'zh_TW' ? 'is-active' : '' %>" onClick="set_language('zh_TW')">中</a>
+            <a href="#" class="btn btn-default <%=lang === 'en' ? 'is-active' : '' %>" onClick="set_language('en')">EN</a>
           </li>
         </ul>
       </div>
