@@ -5,6 +5,16 @@
     - Template: ejs
 - [Google Drive](https://drive.google.com/drive/u/0/folders/0B4fEFbbW93y5Qi1zOGliaS1BX3M)
 
+## Gulp
+
+三種不同的 gulp task，建議前端在 commit 前，使用 `gulp build --env production` 測試 JavaScript 是否正常運作。
+
+```
+gulp # 開發用，包含 watch 
+gulp build # 快速釋出，不含 js, 圖片壓縮 
+gulp build --env production # 完整釋出，含 js, 圖片壓縮
+```
+
 ---
 
 ## Page Router
