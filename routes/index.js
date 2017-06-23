@@ -5,11 +5,19 @@ const SheetCtrl = require('../controllers/sheetCtrl');
 const i18n = require('i18n');
 
 // Data
-let scheduleSheet = new SheetCtrl('schedule')
+let scheduleSheet = new SheetCtrl('schedule');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' })
+  const lang = req.cookies.lang || 'zh_TW';
+
+  i18n.setLocale(global, lang);
+  res.cookie('lang', lang, {
+    maxAge: 900000,
+    httpOnly: true
+  });
+
+  res.render('index', { title: 'Express', lang: lang })
 })
 
 router.get('/schedule', (req, res, next) => {

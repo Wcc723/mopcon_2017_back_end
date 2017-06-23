@@ -6,18 +6,10 @@
 }
 
 .schedule_deco {
-    background-image: url(../images/panel-deco-wave.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(../images/panel-deco-wave.svg);
+    background-repeat: repeat-x;
     width: 100%;
-    padding-bottom: 460px;
-    @include pad-below () {
-        padding-bottom: 40%;
-    }
-    @include mobile() {
-        padding-bottom: 50%;
-    }
-    display: block;
+    padding-bottom: 267px;
     &.reverse {
         transform: rotate(180deg)
     }

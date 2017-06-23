@@ -16,4 +16,9 @@
         margin-top: 20px;
     }
     margin:60px auto;
+    .owl-item {
+        @include mobile() {
+            padding: 20px;
+        }
+    }
 }
