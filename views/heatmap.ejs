@@ -1,0 +1,37 @@
+<div id="heatmapContainer">
+    <img class="conference" src="images/3F.png" alt="" />
+</div>
+
+<script>
+    window.onload = function () {
+        // create a heatmap instance
+        window.heatmap = h337.create({
+            container: document.getElementById('heatmapContainer'),
+            maxOpacity: .5,
+            radius: 10,
+            blur: .75,
+        });
+
+        const count = 500;
+        const generate = () => {
+            const datapoints = Array.from({ length: count }).map(x => ({
+                x: Math.random() * window.innerWidth >> 0, // 座標X
+                y: Math.random() * window.innerHeight >> 0, // 座標Y
+                value: Math.random() * 100 >> 0, // 該偵測點人數
+                radius: Math.random() * 50 >> 0, // 感應器半徑
+            }));
+
+            const data = {
+                max: 100, // 會場總人數或設定上限
+                min: 0,
+                data: datapoints,
+            };
+
+            heatmap.setData(data);
+        };
+        // initial generate
+        generate();
+
+        document.getElementById('heatmapContainer').onclick = function () { generate(); };
+    }
+</script>

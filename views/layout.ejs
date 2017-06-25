@@ -127,4 +127,20 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
+  <script>
+    var map;
+    function initMap() {
+      var position = {lat: 22.626440, lng: 120.285644};
+      map = new google.maps.Map(document.querySelector('.position_map'), {
+        center: position,
+        zoom: 16,
+        scrollwheel: false
+      });
+
+      var marker = new google.maps.Marker({
+        position: position,
+        map: map
+      });
+    }
+  </script>
   </html>

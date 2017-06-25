@@ -24,6 +24,18 @@ router.get('/schedule', (req, res, next) => {
   res.render('schedule', { title: 'Express', data: scheduleSheet.data })
 })
 
+router.get('/heatmap', function (req, res, next) {
+  const lang = req.cookies.lang || 'zh_TW';
+
+  i18n.setLocale(global, lang);
+  res.cookie('lang', lang, {
+    maxAge: 900000,
+    httpOnly: true
+  });
+
+  res.render('heatmap', { title: 'Express', lang: lang })
+})
+
 // router.get('/:folder/:action', (req, res, next) => {
 //   let folder = req.param('folder')
 //   let action = req.param('action')
