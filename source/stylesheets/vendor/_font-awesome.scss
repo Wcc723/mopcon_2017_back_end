@@ -219,11 +219,11 @@
 // .fa-check:before {
 //   content: "\f00c";
 // }
-// .fa-remove:before,
-// .fa-close:before,
-// .fa-times:before {
-//   content: "\f00d";
-// }
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "\f00d";
+}
 // .fa-search-plus:before {
 //   content: "\f00e";
 // }
@@ -942,9 +942,9 @@
 // .fa-spinner:before {
 //   content: "\f110";
 // }
-// .fa-circle:before {
-//   content: "\f111";
-// }
+.fa-circle:before {
+  content: "\f111";
+}
 // .fa-mail-reply:before,
 // .fa-reply:before {
 //   content: "\f112";

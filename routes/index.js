@@ -20,8 +20,20 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express', lang: lang })
 })
 
-router.get('/schedule', (req, res, next) => {
-  res.render('schedule', { title: 'Express', data: scheduleSheet.data })
+// router.get('/schedule', (req, res, next) => {
+//   res.render('schedule', { title: 'Express', data: scheduleSheet.data })
+// })
+
+router.get('/schedule', function (req, res, next) {
+  const lang = req.cookies.lang || 'zh_TW';
+
+  i18n.setLocale(global, lang);
+  res.cookie('lang', lang, {
+    maxAge: 900000,
+    httpOnly: true
+  });
+
+  res.render('schedule', { title: 'Express', lang: lang })
 })
 
 router.get('/heatmap', function (req, res, next) {

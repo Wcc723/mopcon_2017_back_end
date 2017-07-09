@@ -15,10 +15,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' })
 })
 
-router.get('/schedule', (req, res, next) => {
-  res.send(scheduleSheet.data)
-  res.end()
-})
+// router.get('/schedule', (req, res, next) => {
+//   res.send(scheduleSheet.data)
+//   res.end()
+// })
 
 router.get('/unconf', (req, res, next) => {
   res.send({
